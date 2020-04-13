@@ -9,12 +9,11 @@ EXEC = iBUS_js
 $(EXEC): $(OBJ_FILES)
 	$(CC) -o $@ $^ $(OPT)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+$(OBJ_DIR):
+	mkdir -p $@
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) -c -o $@ $< $(OPT)
 
-
-
 clean:
-	rm -f $(OBJ_FILES) $(EXEC)
-
-.PHONY: clean
+	rm -rfv $(OBJ_DIR) $(EXEC)
