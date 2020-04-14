@@ -2,7 +2,7 @@
 
 This software allow you to use any FlySky iBUS receiver to use your FlySky transmitter as a USB gamepad to controls your FPV simulator.
 
-# WHAT I NEED
+# WHAT YOU NEED
 ## USB SERIAL ADAPTER
 You need a USB serial adapter, can be used also an arduino, with the RST pin connected to GND.
 ## FlySky receiver
